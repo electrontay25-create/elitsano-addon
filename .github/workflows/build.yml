@@ -1,0 +1,27 @@
+name: Compilar Elitsano Addon (.mcaddon)
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar zip
+        run: sudo apt-get update && sudo apt-get install -y zip
+
+      - name: Empaquetar Behavior Pack y Resource Pack en .mcaddon
+        run: |
+          mkdir -p dist
+          zip -r dist/Elitsano_Horror_v1.0.mcaddon behavior_pack resource_pack
+
+      - name: Subir artefacto .mcaddon
+        uses: actions/upload-artifact@v4
+        with:
+          name: Elitsano-Addon-Bedrock
+          path: dist/Elitsano_Horror_v1.0.mcaddon
