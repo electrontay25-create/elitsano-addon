@@ -1,0 +1,70 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.elitsano.look_at_target": {
+      "loop": true,
+      "bones": {
+        "head": {
+          "rotation": [
+            "query.target_x_rotation",
+            "query.target_y_rotation",
+            0.0
+          ]
+        }
+      }
+    },
+    "animation.elitsano.walk": {
+      "loop": true,
+      "anim_time_update": "query.modified_distance_moved",
+      "bones": {
+        "leftLeg": {
+          "rotation": [
+            "math.cos(query.anim_time * 38.17) * 55.0",
+            0.0,
+            0.0
+          ]
+        },
+        "rightLeg": {
+          "rotation": [
+            "-math.cos(query.anim_time * 38.17) * 55.0",
+            0.0,
+            0.0
+          ]
+        },
+        "leftArm": {
+          "rotation": [
+            "-math.cos(query.anim_time * 38.17) * 65.0",
+            0.0,
+            -10.0
+          ]
+        },
+        "rightArm": {
+          "rotation": [
+            "math.cos(query.anim_time * 38.17) * 65.0",
+            0.0,
+            10.0
+          ]
+        }
+      }
+    },
+    "animation.elitsano.idle": {
+      "loop": true,
+      "bones": {
+        "rightArm": {
+          "rotation": [
+            "math.cos(query.life_time * 60.0) * 2.0",
+            0.0,
+            2.0
+          ]
+        },
+        "leftArm": {
+          "rotation": [
+            "-math.cos(query.life_time * 60.0) * 2.0",
+            0.0,
+            -2.0
+          ]
+        }
+      }
+    }
+  }
+}

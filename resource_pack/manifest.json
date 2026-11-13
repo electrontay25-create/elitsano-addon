@@ -1,0 +1,40 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Elitsano Horror Addon [RP]",
+    "description": "Modelo 3D de jugador, textura terrorifica y animaciones de Elitsano.",
+    "uuid": "b7795f56-9e8a-4506-9b10-18a55646ff3d",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      60
+    ]
+  },
+  "modules": [
+    {
+      "description": "Recursos visuales de Elitsano",
+      "type": "resources",
+      "uuid": "d218d757-599b-46fe-9ab4-1266ecbccee7",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "6cf55307-2beb-491f-9250-daa9723cd467",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Elitsano Horror Addon [BP]",
+    "description": "Entidad de terror psicologico Elitsano. Acecha, golpea puertas y caza en la oscuridad.",
+    "uuid": "6cf55307-2beb-491f-9250-daa9723cd467",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      60
+    ]
+  },
+  "modules": [
+    {
+      "description": "Comportamientos de Elitsano",
+      "type": "data",
+      "uuid": "8c23f077-2e09-4999-9ec1-d418eecabafb",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "description": "Motor de eventos y terror de Elitsano",
+      "type": "script",
+      "language": "javascript",
+      "uuid": "f2053948-3a0d-4b2f-b1d5-ea60b7ead227",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "entry": "scripts/main.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "b7795f56-9e8a-4506-9b10-18a55646ff3d",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "1.17.0"
+    }
+  ]
+}
